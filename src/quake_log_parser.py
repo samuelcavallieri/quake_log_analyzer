@@ -42,4 +42,17 @@ def parse_log_file(log_file):
     for game in games.values():
         game["players"] = list(game["players"])
 
-    return games
+    return 
+
+def generate_player_ranking(games):
+    """
+    Generates a player ranking based on the total number of kills in all matches.
+    """
+    player_kills = {}
+    for game in games.values():
+        for player, kills in game["kills"].items():
+            player_kills.setdefault(player, 0)
+            player_kills[player] += kills
+
+    ranking = sorted(player_kills.items(), key=lambda x: x[1], reverse=True)
+    return ranking
