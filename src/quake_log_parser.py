@@ -1,13 +1,13 @@
 import re
 
-def parse_log_file(log_file):
+def parse_log_file(log_file_path):
     """
     Reads the log file and groups the information by match.
     """
     games = {}
     current_game = None
 
-    with open(log_file, 'r') as f:
+    with open(log_file_path, 'r') as f:
         for line in f:
             if "InitGame:" in line:
                 current_game = f"game-{len(games) + 1}"
@@ -42,7 +42,7 @@ def parse_log_file(log_file):
     for game in games.values():
         game["players"] = list(game["players"])
 
-    return 
+    return games
 
 def generate_player_ranking(games):
     """
