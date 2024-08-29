@@ -66,15 +66,6 @@ This Python project analyzes Quake 3 Arena game log files, generating reports on
 
    The test results will be displayed in your terminal, indicating if the tests passed or failed.
 
-## Continuous Integration (CI) with GitHub Actions
-
-This project includes a GitHub Actions workflow to automate the testing process. Whenever you push changes to the `main` branch or create a pull request, the following steps will be executed:
-
-1.  **Checkout code:** The latest code from your repository is checked out.
-2.  **Set up Python:** The appropriate Python environment is set up.
-3.  **Run tests:** The unit tests are executed.
-
-You can view the details of the workflow and its execution status in the "Actions" tab of your GitHub repository.
 
 ## Code Explanation
 
