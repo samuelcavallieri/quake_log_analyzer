@@ -18,6 +18,9 @@ jobs:
       with:
         python-version: '3.x'
 
+    - name: Copy test log file
+      run: cp tests/test_games.log . 
+
     - name: Run tests 
       run: |
-        python -m unittest discover tests
+        python -m unittest tests/test_quake_log_parser.py
