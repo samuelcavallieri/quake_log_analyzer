@@ -4,14 +4,6 @@ This Python project analyzes Quake 3 Arena game log files, generating reports on
 
 ## Project Structure
 
-quake_log_analyzer/
-├── src/
-│   ├── quake_log_parser.py
-│   └── report_generator.py
-├── tests/
-│   └── test_quake_log_parser.py
-├── games.log
-└── README.md
 
 *   **`src/`**: Contains the main source code.
     *   **`quake_log_parser.py`**: Functions to process the log file and extract relevant information.
